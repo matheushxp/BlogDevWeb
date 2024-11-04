@@ -1,0 +1,252 @@
+/* Banners Rotativos */
+.banner-rotativo {
+    display: flex;
+    overflow: hidden;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.banner {
+    flex: 0 0 100%;
+    background-color: #222;
+    color: #32CD32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    transition: transform 0.5s ease;
+}
+
+/* Seções de Artigos Recentes e Destaque */
+.recentes, .destaque {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.recentes h2, .destaque h2 {
+    color: #32CD32;
+    margin-bottom: 15px;
+}
+
+.artigo, .artigo-destaque {
+    background-color: #222;
+    color: #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.artigo:hover, .artigo-destaque:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #32CD32;
+}
+/* Estilo do Rodapé */
+.footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-section h3 {
+    color: #32CD32; /* Verde para títulos */
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+    color: #e0e0e0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #9400D3; /* Roxo no hover */
+}
+
+.social-link {
+    display: inline-block;
+    color: #32CD32; /* Verde para links de redes sociais */
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #9400D3; /* Roxo no hover */
+}
+
+/* Rodapé Inferior */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #32CD32;
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+
+.noticias {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.noticia {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #222;
+    border-radius: 8px;
+}
+
+.noticia h3 {
+    color: #32CD32; /* Verde */
+    margin-bottom: 8px;
+}
+
+.noticia p {
+    color: #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.noticia a {
+    color: #9400D3; /* Roxo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.noticia a:hover {
+    color: #32CD32; /* Verde no hover */
+}
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #111; /* Preto para o fundo */
+    color: #e0e0e0; /* Texto principal em cinza claro */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1a1a1a; /* Fundo escuro para cabeçalho */
+    color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo h1 {
+    color: #32CD32; /* Verde para o logo */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #9400D3; /* Roxo no hover */
+}
+
+/* Seção de Reviews */
+.reviews {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.reviews h2 {
+    text-align: center;
+    color: #32CD32; /* Verde para o título principal */
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.review {
+    background-color: #222; /* Fundo mais escuro para cada review */
+    border: 1px solid #32CD32; /* Borda verde */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review:hover {
+    transform: scale(1.02); /* Leve aumento no hover */
+    box-shadow: 0 0 10px #32CD32; /* Sombra verde */
+}
+
+.review h3 {
+    color: #9400D3; /* Roxo para os títulos das reviews */
+    margin-bottom: 10px;
+}
+
+.review p {
+    color: #e0e0e0; /* Texto claro */
+    margin-bottom: 15px;
+}
+
+.review a {
+    color: #32CD32; /* Verde para o link "Leia Mais" */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.review a:hover {
+    color: #9400D3; /* Roxo no hover do link */
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
