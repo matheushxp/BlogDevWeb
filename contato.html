@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato - Blog de Games</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Blog de Games</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulário de Contato -->
+    <section class="contact-form">
+        <h2>Entre em Contato</h2>
+        <form id="cadastroForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+
+    <!-- Área de Comentários -->
+    <section class="comments-section">
+        <h2>Comentários</h2>
+        <form id="comentarioForm">
+            <label for="comentario">Deixe seu comentário:</label>
+            <textarea id="comentario" name="comentario" rows="4" required></textarea>
+            <button type="submit">Enviar Comentário</button>
+        </form>
+
+        <!-- Comentários -->
+        <div id="comentarios">
+            <p>Os comentários aparecerão aqui após o cadastro.</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Blog de Games. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
