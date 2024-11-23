@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Games - Home</title>
+    <title>Loading... Blog - Home</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="game.icon.png" type="image/x-icon">
 </head>
@@ -12,8 +12,8 @@
 
     <header>
         <div class="logo">
-            <h1>Blog de Games</h1>
-            <img src="game.icon.png" width="100px">
+            <h1>Loading... Blog</h1>
+            <img src="game.icon.png" width="100px" alt="ícone do blog">
         </div>
         <nav>
             <ul>
@@ -27,45 +27,96 @@
 
     <!-- Banners Rotativos -->
 
-    <section class="banner-rotativo">
-        <div class="banner" id="banner1">Banner 1: Jogo Lançamento</div>
-        <div class="banner" id="banner2">Banner 2: Evento de Game</div>
-        <div class="banner" id="banner3">Banner 3: Promoção de Produtos</div>
+    <div class="slider">
+
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+
+            <div class="slide first">
+                <a href="https://www.theenemy.com.br/pc/criticas/review-black-myth-wukong" target="_blank">
+                    <img src="images/wukong.webp" alt="img1">
+                </a>
+            </div>
+            <div class="slide ">
+                <a href="https://www.brasilgameshow.com.br/" target="_blank">
+                    <img src="images/BGS.webp" alt="img2">
+                </a>
+            </div>
+            <div class="slide ">
+                <a href="https://www.playstation.com/pt-br/ps5/ps5-pro/" target="_blank">
+                    <img src="images/ps5.webp" alt="img3">
+                </a>
+            </div>
+            <div class="slide ">
+                <a href="https://store.steampowered.com/specials?l=portuguese" target="_blank">
+                    <img src="images/steam.jpg" alt="img4">
+                </a>
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+        </div>
+
+        <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+
+    </div>
+
+<!-- Destaque -->
+
+    <section class="destaque">
+        <h2>O jogo mais esperado da década</h2>
+        <article class="artigo-destaque">
+            <img src="images/gtavi.webp" width="500px" alt="GTA 6 image">
+            <h3>Novidades sobre GTA VI</h3>
+            <p>GTA 6 será ambientado em Leonida, um estado da cidade fictícia de Vice City, que retorna a aparecer na franquia após 18 anos desde sua última aparição em GTA: Vice City Stories, prelúdio do clássico GTA: Vice City.
+
+                Ainda não sabemos o tamanho do mapa, mas as ambientações vão além das ruas da cidade, com direito a praias e áreas internas como casas e prédios. A estética ainda promete ser puxada para o neon.</p>
+            <a href="https://www.tecmundo.com.br/voxel/294751-dona-gta-6-traz-novidades-data-lancamento-confira.htm" target="_blank">Leia Mais</a>
+        </article>
     </section>
 
     <!-- Artigos Recentes -->
 
     <section class="recentes">
-        <h2>Artigos Recentes</h2>
-        <article class="artigo">
-            <h3>Artigo 1</h3>
-            <p>Resumo do artigo mais recente...</p>
-            <a href="#">Leia Mais</a>
-        </article>
-        <article class="artigo">
-            <h3>Artigo 2</h3>
-            <p>Resumo do segundo artigo...</p>
-            <a href="#">Leia Mais</a>
-        </article>
-        <article class="artigo">
-            <h3>Artigo 3</h3>
-            <p>Resumo do terceiro artigo...</p>
-            <a href="#">Leia Mais</a>
-        </article>
-    </section>
-
-    <!-- Seção de Destaque -->
-
-    <section class="destaque">
-        <h2>Destaque</h2>
-        <article class="artigo-destaque">
-            <h3>Artigo em Destaque</h3>
-            <p>Resumo do artigo popular...</p>
-            <a href="#">Leia Mais</a>
-        </article>
+        <h2>Novidades sobre o mundo dos Games</h2>
+        <section class="artigos">
+            <article class="artigo">
+                <img src="images/sonicxshadow.jpg" alt="Throne and Liberty">
+                <h3>Sonic X Shadow Generations</h3>
+                <p>Após muitos anos de espera, aos amantes dos jogos do Sonic e ainda mais aos amantes do personagem Shadow, finalmente teremos outro jogo com campanha solo do ouriço emo. Depois de Shadow the Hedgehog(que muitos preferem nem lembrar), é o segundo jogo Sonic the Hedgehog a apresentar Shadow como protagonista.</p>
+                <a href="https://br.ign.com/sonic-x-shadow-generations/131394/review/sonic-x-shadow-generations-aperfeicoa-o-que-ja-era-otimo-e-faz-shadow-brilhar-review" target="_blank">Leia mais</a>
+            </article>
+        
+            <article class="artigo">
+                <img src="images/playstastion.png" alt="PlayStation">
+                <h3>Black Friday na PlayStation!</h3>
+                <p>A partir do dia 2 de dezembro, fique por dentro e aproveite as promoções na PS Store. As promoções vão de jogos ate consoles.</p>
+                <a href="https://flowgames.gg/black-friday-2024-playstation-ofertas-lista/" target="_blank">Leia mais</a>
+            </article>
+        
+            <article class="artigo">
+                <img src="images/minecraftmovie.avif" alt="Minecraft Movie">
+                <h3>Minecraft: O Filme</h3>
+                <p>O aclamado joguinho quadrado amado por tantos está prestes a receber uma adpatação para live action, acompanhe o trailer no site oficial.</p>
+                <a href="https://www.minecraft.net/pt-br/article/a-minecraft-movie-official-trailer" target="_blank">Leia mais</a>
+            </article>
     </section>
 
     <!-- Rodapé -->
+
     <footer class="footer">
         <div class="footer-content">
 
@@ -79,18 +130,17 @@
 
             <div class="footer-section social">
                 <h3>Redes Sociais</h3>
-                <p>Nos siga nas redes sociais:</p>
-                <a href="#" class="social-link">Facebook</a>
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">Instagram</a>
+                <p>Nos siga no Instagram:</p>
+                <a href="https://www.instagram.com/computacaounifavip_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="social-link">@computacaounifavip_</a>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2024 Blog de Games. Todos os direitos reservados.</p>
+            <p>&copy; 2024 Loading... Blog. (quase)Todos os direitos reservados.</p>
         </div>
     </footer>
     <script src="js/scripts.js"></script>
+    <script src="js/banner.js"></script>
 </body>
 
 </html>

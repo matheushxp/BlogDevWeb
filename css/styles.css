@@ -1,52 +1,246 @@
 /* Banners Rotativos */
-* { margin: 0; padding: 0; }
-
 .slider {
-    display: block;
-    height: 293px;
-    width: 600px;
-    margin: auto;
-    margin-top: 20px;
-    position: relative;
-}
-
-.slider li {
-    list-style: none;
-    position: absolute;
-}
-
-.slider img {
-    margin: auto;
-    height: 100%;
-    width: 100%;
-    vertical-align: top;
-}
-
-/* Seções de Artigos Recentes e Destaque */
-.recentes, .destaque {
-    max-width: 800px;
     margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 800px;
+}
+
+/* Efeito ao passar o mouse nas imagens */
+
+.slide a img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.slide a img:hover {
+    transform: scale(1.05);
+    filter: brightness(85%);
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: #fff;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+
+.navigation-auto div {
+    border: 2px solid #20adff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: #fff;
+}
+
+/* Seção do Destaque*/
+
+.destaque {
+    padding: 30px;
+    background: linear-gradient(135deg, #4caf50, #9c27b0);
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.destaque h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.artigo-destaque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.artigo-destaque img {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.artigo-destaque h3 {
+    font-size: 1.8rem;
+    color: #4caf50;
+    margin-bottom: 10px;
+}
+
+.artigo-destaque p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.artigo-destaque a {
+    text-decoration: none;
+    background-color: #9c27b0;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.artigo-destaque a:hover {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+
+/* Seção de Artigos Recentes  */
+
+h2 {
+    padding: 30px;
+    background: linear-gradient(135deg, #4caf50, #9c27b0);
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.artigos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
-.recentes h2, .destaque h2 {
-    color: #32CD32;
-    margin-bottom: 15px;
-}
-
-.artigo, .artigo-destaque {
-    background-color: #222;
-    color: #e0e0e0;
-    padding: 15px;
-    margin-bottom: 15px;
+.artigo {
+    border: 1px solid #ddd;
     border-radius: 8px;
-    transition: transform 0.3s;
+    overflow: hidden;
+    background: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.artigo:hover, .artigo-destaque:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 10px #32CD32;
+.artigo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+.artigo img {
+    width: 100%;
+    height: auto;
+}
+
+.artigo h3 {
+    font-size: 1.5rem;
+    color: #2e2e2e; 
+    padding: 10px;
+}
+
+.artigo p {
+    padding: 0 10px 10px;
+    font-size: 1rem;
+    color: #4a4a4a; 
+}
+.artigo a {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.artigo a:hover {
+    background-color: #9c27b0;
+}
+
+
+
 /* Estilo do Rodapé */
 .footer {
     background-color: #1a1a1a;
@@ -68,7 +262,7 @@
 }
 
 .footer-section h3 {
-    color: #32CD32; /* Verde para títulos */
+    color: #32CD32; 
     margin-bottom: 10px;
 }
 
@@ -93,19 +287,19 @@
 }
 
 .footer-section ul li a:hover {
-    color: #9400D3; /* Roxo no hover */
+    color: #9400D3; 
 }
 
 .social-link {
     display: inline-block;
-    color: #32CD32; /* Verde para links de redes sociais */
+    color: #32CD32; 
     margin-right: 10px;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .social-link:hover {
-    color: #9400D3; /* Roxo no hover */
+    color: #9400D3; 
 }
 
 /* Rodapé Inferior */
@@ -133,7 +327,7 @@
 }
 
 .noticia h3 {
-    color: #32CD32; /* Verde */
+    color: #32CD32; 
     margin-bottom: 8px;
 }
 
@@ -143,13 +337,13 @@
 }
 
 .noticia a {
-    color: #9400D3; /* Roxo */
+    color: #9400D3; 
     text-decoration: none;
     font-weight: bold;
 }
 
 .noticia a:hover {
-    color: #32CD32; /* Verde no hover */
+    color: #32CD32; 
 }
 
 /* Estilos gerais */
@@ -161,13 +355,13 @@
 }
 
 body {
-    background-color: #111; /* Preto para o fundo */
-    color: #e0e0e0; /* Texto principal em cinza claro */
+    background-color: #111; 
+    color: #e0e0e0; 
 }
 
 /* Cabeçalho */
 header {
-    background-color: #1a1a1a; /* Fundo escuro para cabeçalho */
+    background-color: #1a1a1a; 
     color: #e0e0e0;
     padding: 20px;
     display: flex;
@@ -176,7 +370,7 @@ header {
 }
 
 header .logo h1 {
-    color: #32CD32; /* Verde para o logo */
+    color: #32CD32; 
 }
 
 header nav ul {
@@ -197,53 +391,57 @@ header nav ul li a:hover {
 }
 
 /* Seção de Reviews */
-.reviews {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
+.variedades {
+    padding: 20px;
+    background-color: #1c1c1c; /* Fundo escuro */
+    color: #fff;
 }
 
-.reviews h2 {
-    text-align: center;
-    color: #32CD32; /* Verde para o título principal */
-    margin-bottom: 30px;
-    font-size: 28px;
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .review {
-    background-color: #222; /* Fundo mais escuro para cada review */
-    border: 1px solid #32CD32; /* Borda verde */
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .review:hover {
-    transform: scale(1.02); /* Leve aumento no hover */
-    box-shadow: 0 0 10px #32CD32; /* Sombra verde */
+    transform: scale(1.05); /* Efeito de zoom */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.review img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .review h3 {
-    color: #9400D3; /* Roxo para os títulos das reviews */
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
 .review p {
-    color: #e0e0e0; /* Texto claro */
-    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #ccc;
 }
 
 .review a {
-    color: #32CD32; /* Verde para o link "Leia Mais" */
     text-decoration: none;
+    color: #03f810; /* Cor azul clara */
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .review a:hover {
-    color: #9400D3; /* Roxo no hover do link */
+    color: #fff;
 }
+
 
 /* Rodapé */
 footer {
